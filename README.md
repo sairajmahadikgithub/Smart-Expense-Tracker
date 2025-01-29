@@ -2,7 +2,7 @@
 
 A web-based personal finance management tool to track expenses, set budgets, and visualize spending patterns.
 
-![Expense Tracker Demo]() <!-- Add your screenshot -->
+![Expense Tracker Demo](https://sairajmahadikgithub.github.io/Smart-Expense-Tracker/) <!-- Add your screenshot -->
 
 ## 🚀 Features
 - **Budget Management**: Set monthly spending limits
