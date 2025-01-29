@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-wallet"></i> Smart Expense Tracker</h1>
+        
+        <div class="budget-section">
+            <h2><i class="fas fa-coins"></i> Set Monthly Budget</h2>
+            <form id="budgetForm" class="budget-form">
+                <div class="form-group">
+                    <label for="budget"><i class="fas fa-rupee-sign"></i> Monthly Budget:</label>
+                    <input type="number" id="budget" required min="1" step="1" placeholder="Enter your monthly budget in ₹">
+                </div>
+                <button type="submit"><i class="fas fa-save"></i> Set Budget</button>
+            </form>
+            <div class="budget-info">
+                <p><i class="fas fa-chart-line"></i> Current Budget: ₹<span id="currentBudget">0</span></p>
+                <p><i class="fas fa-receipt"></i> Total Expenses: ₹<span id="totalExpenses">0</span></p>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="expense-section">
+            <h2><i class="fas fa-plus-circle"></i> Add Expense</h2>
+            <form id="expenseForm" class="expense-form">
+                <div class="form-group">
+                    <label for="expenseTitle"><i class="fas fa-tag"></i> Title:</label>
+                    <input type="text" id="expenseTitle" required placeholder="What did you spend on?">
+                </div>
+                <div class="form-group">
+                    <label for="expenseAmount"><i class="fas fa-rupee-sign"></i> Amount:</label>
+                    <input type="number" id="expenseAmount" required min="1" step="1" placeholder="How much did you spend?">
+                </div>
+                <div class="form-group">
+                    <label for="expenseCategory"><i class="fas fa-folder"></i> Category:</label>
+                    <select id="expenseCategory" required>
+                        <option value="food">🍽️ Food</option>
+                        <option value="transportation">🚗 Transportation</option>
+                        <option value="utilities">🏠 Utilities</option>
+                        <option value="entertainment">🎮 Entertainment</option>
+                        <option value="other">📦 Other</option>
+                    </select>
+                </div>
+                <button type="submit"><i class="fas fa-plus"></i> Add Expense</button>
+            </form>
+        </div>
+
+        <div class="visualization-section">
+            <h2><i class="fas fa-chart-pie"></i> Expense Breakdown</h2>
+            <div class="chart-container">
+                <div id="pieChart" class="pie-chart"></div>
+                <div id="chartLegend" class="chart-legend"></div>
+            </div>
+        </div>
+
+        <div class="expenses-list">
+            <h2><i class="fas fa-list"></i> Recent Expenses</h2>
+            <div id="expensesList"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
